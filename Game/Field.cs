@@ -122,7 +122,7 @@ namespace consoleSeaBattle {
 				Render.Clear();
 
 				Console.ForegroundColor = ConsoleColor.Blue;
-				Console.Write(loader[loadCount] + "  " + loaderText + "\n");
+				Console.Write(" " + loader[loadCount] + "  " + loaderText + "\n");
 				loadCount++;
 				loadCount %= Convert.ToByte(loader.Length);
 				Console.ResetColor();
@@ -234,7 +234,8 @@ namespace consoleSeaBattle {
 		public void modernPrint() {
 			// сохраняем начальное положение каретки
 			(int left, int top) = Console.GetCursorPosition();
-			// сразу задаем отступ сверху
+			// сразу задаем отступ
+			left += 1;
 			top += 1;
 
 			// Рисуем заголовок

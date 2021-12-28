@@ -6,7 +6,8 @@ namespace consoleSeaBattle {
 
 		public static void Main() {
 			Console.Clear();
-			Console.SetWindowSize(70, 30);
+			Console.SetWindowSize(80, 40);
+			Console.SetBufferSize(80, 40);
 
 			Console.CursorVisible = false;
 			
