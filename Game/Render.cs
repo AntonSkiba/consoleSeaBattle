@@ -3,9 +3,9 @@ using System;
 namespace consoleSeaBattle {
 	class Render {
 		public static void RenderTitle(string text, ConsoleColor color) {
-			Console.CursorVisible = false;
 			Console.ForegroundColor = color;
 			Console.Clear();
+			Console.Write("\n\n");
 			Alphabet.print(text);
 			Console.Write("\n\n");
 			Console.ResetColor();
@@ -54,11 +54,11 @@ namespace consoleSeaBattle {
 		}
 
 		public static void Clear() {
-			Console.SetCursorPosition(0, 5);
-			for (byte i = 0; i < Console.WindowHeight - 5; i++) {
+			Console.SetCursorPosition(0, 7);
+			for (byte i = 0; i < Console.WindowHeight - 7; i++) {
 				Console.Write(new string(' ', Console.WindowWidth)); 
 			}
-			Console.SetCursorPosition(0, 5);
+			Console.SetCursorPosition(0, 7);
 
 		}
 
