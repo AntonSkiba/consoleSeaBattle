@@ -13,7 +13,6 @@ namespace consoleSeaBattle {
 		// подбитая часть корабля соперника
 		protected List<Point> explodedPoints = new List<Point>();
 		protected List<Point> potentialExplodedPoints = new List<Point>();
-		//protected byte explodedStep = 0;
 
 		protected Point potentialExploded = null;
 
@@ -113,10 +112,6 @@ namespace consoleSeaBattle {
 				int left = point.X - 1 < 0 ? 0 : point.X - 1;
 				this.potentialExplodedPoints.Add(new Point(Convert.ToByte(left), point.Y));
 			} else {
-				// Console.WriteLine("Да я определил две точки");
-				// Console.Write("x: " + this.explodedPoints[0].X + ", y: " + this.explodedPoints[0].Y);
-				// Console.Write("x: " + this.explodedPoints[1].X + ", y: " + this.explodedPoints[1].Y);
-				// Console.ReadKey();
 				int size = this.explodedPoints.Count;
 				bool isVertical = this.explodedPoints[0].X - this.explodedPoints[size - 1].X == 0;
 				if (isVertical) {

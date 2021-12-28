@@ -117,7 +117,6 @@ namespace consoleSeaBattle {
 			Point start = new Point(5, 5);
 			while (!isDone) {
 				await timer.WaitForNextTickAsync();
-				//bool done = false;
 				ship.setPoints(start);
 
 				Render.Clear();

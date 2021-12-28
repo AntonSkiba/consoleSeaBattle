@@ -18,15 +18,6 @@ namespace consoleSeaBattle {
 				string menuKey = this.menu.select();
 
 				if (menuKey == "newGame") {
-					// Создаем поле игрока
-					// Field playerField = new Field("Ваше поле");
-					// string status = playerField.setShips();
-					// if (status == "auto") {
-					// 	await playerField.autoSet(5, true, "Автоматическая расстановка");
-					// } else if (status != "done") {
-					// 	continue;
-					// }
-
 					Player player = new Player();
 					bool playerReady = await player.setField();
 					if (!playerReady) continue;
@@ -43,9 +34,6 @@ namespace consoleSeaBattle {
 
 					Bot bot = new Bot();
 					await bot.setField();
-
-					// Field enemyField = new Field("Поле противника");
-					// await enemyField.autoSet(5, false, "Противник расставляет кораблики");
 
 					MenuItem yes = new MenuItem("yes", "ДА!");
 					MenuItem no = new MenuItem("no", "Нет :c");
